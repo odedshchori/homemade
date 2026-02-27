@@ -25,6 +25,7 @@
 *.pem
 /credentials
 /conductor
+GEMINI.md
 
 # debug
 npm-debug.log*
