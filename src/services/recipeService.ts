@@ -11,7 +11,7 @@ export const getSuggestedRecipes = async (pantry: Ingredient[]): Promise<Recipe[
     return getMockRecipes();
   }
 
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
 
   const pantryList = pantry.map(ing => `${ing.name} (${ing.quantity} ${ing.unit})`).join(', ');
 
