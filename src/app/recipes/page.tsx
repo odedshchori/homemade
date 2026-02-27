@@ -48,7 +48,12 @@ export default function RecipesPage() {
         </Link>
       </header>
 
-      {error && <p className="text-red-500 mb-4">{error}</p>}
+      {error && <p className="text-red-500 mb-4 bg-red-100 p-3 rounded-lg">{error}</p>}
+      {!process.env.NEXT_PUBLIC_GEMINI_API_KEY && (
+        <div className="mb-4 bg-orange-100 p-3 rounded-lg text-orange-800 text-sm">
+          <strong>Note:</strong> Gemini API key is missing. Showing mock data. Add it to your <code>.env.local</code> to get real suggestions!
+        </div>
+      )}
 
       {!recipes.length && !loading && (
         <div className="text-center py-12">
