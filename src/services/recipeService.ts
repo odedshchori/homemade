@@ -10,7 +10,7 @@ const generateWithModel = async (modelName: string, prompt: string): Promise<Rec
   const text = response.text();
   
   // Clean up response text if it includes markdown code blocks
-  const cleanedText = text.replace(/```json/g/i, '').replace(/```/g, '').trim();
+  const cleanedText = text.replace(/```json/gi, '').replace(/```/g, '').trim();
   return JSON.parse(cleanedText) as Recipe[];
 };
 
@@ -50,11 +50,11 @@ export const getSuggestedRecipes = async (pantry: Ingredient[]): Promise<Recipe[
     const is503 = errorWithStatus?.status === 503 || errorWithStatus?.message?.includes('503') || errorWithStatus?.message?.includes('high demand');
     
     if (is503) {
-      console.warn('gemini-3-flash-preview is experiencing high demand (503). Falling back to gemini-1.5-flash...');
+      console.warn('gemini-3-flash-preview is experiencing high demand (503). Falling back to gemini-1.5-flash-latest...');
       try {
-        return await generateWithModel("gemini-1.5-flash", prompt);
+        return await generateWithModel("gemini-1.5-flash-latest", prompt);
       } catch (fallbackError) {
-        console.error('Fallback model gemini-1.5-flash also failed:', fallbackError);
+        console.error('Fallback model gemini-1.5-flash-latest also failed:', fallbackError);
         throw new Error('GEMINI_SERVICE_UNAVAILABLE');
       }
     }
@@ -62,8 +62,8 @@ export const getSuggestedRecipes = async (pantry: Ingredient[]): Promise<Recipe[
     console.error('Error generating recipes with Gemini (primary model):', error);
     // Even for non-503, we might want to try fallback once if it's a transient issue
     try {
-      console.log('Attempting fallback to gemini-1.5-flash after primary error...');
-      return await generateWithModel("gemini-1.5-flash", prompt);
+      console.log('Attempting fallback to gemini-1.5-flash-latest after primary error...');
+      return await generateWithModel("gemini-1.5-flash-latest", prompt);
     } catch (fallbackError) {
       console.error('Fallback model also failed:', fallbackError);
       throw new Error('GEMINI_SERVICE_UNAVAILABLE');
