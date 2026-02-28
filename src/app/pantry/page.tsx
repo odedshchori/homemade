@@ -1,9 +1,10 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { createClient } from '@/lib/supabase'
 import { Ingredient, Category, Unit } from '@/types'
 import { useRouter } from 'next/navigation'
+import { User } from '@supabase/supabase-js'
 
 const CATEGORIES: Category[] = [
   'Fruits', 'Vegetables', 'Legumes', 'Sauces', 'Dairy', 'Meat', 'Grains', 'Spices', 'Other'
@@ -13,7 +14,7 @@ const UNITS: Unit[] = ['quantity', 'kg', 'g', 'ml', 'l', 'tsp', 'tbsp', 'cup']
 export default function PantryPage() {
   const [ingredients, setIngredients] = useState<Ingredient[]>([])
   const [loading, setLoading] = useState(true)
-  const [user, setUser] = useState<any>(null)
+  const [user, setUser] = useState<User | null>(null)
   
   // New ingredient form state
   const [newName, setNewName] = useState('')
@@ -28,6 +29,18 @@ export default function PantryPage() {
   const supabase = createClient()
   const router = useRouter()
 
+  const fetchIngredients = useCallback(async (userId: string) => {
+    const { data, error } = await supabase
+      .from('ingredients')
+      .select('*')
+      .eq('user_id', userId)
+      .order('name', { ascending: true })
+
+    if (error) console.error('Error fetching ingredients:', error)
+    else setIngredients(data || [])
+    setLoading(false)
+  }, [supabase])
+
   useEffect(() => {
     const checkUser = async () => {
       const { data: { user } } = await supabase.auth.getUser()
@@ -39,19 +52,7 @@ export default function PantryPage() {
       }
     }
     checkUser()
-  }, [])
-
-  const fetchIngredients = async (userId: string) => {
-    const { data, error } = await supabase
-      .from('ingredients')
-      .select('*')
-      .eq('user_id', userId)
-      .order('name', { ascending: true })
-
-    if (error) console.error('Error fetching ingredients:', error)
-    else setIngredients(data || [])
-    setLoading(false)
-  }
+  }, [router, supabase, fetchIngredients])
 
   const addIngredient = async (e: React.FormEvent) => {
     e.preventDefault()
