@@ -16,5 +16,6 @@
 - **Platform:** Vercel
 - **CI/CD:** Automatic via GitHub/GitLab integration
 
-## Potential AI Integration
-- OpenAI (GPT-4) or Google Gemini API
+## AI Services
+- **Google Gemini API** (`@google/generative-ai`)
+- **Multi-model fallback logic** (Flash 3.0 to Flash 1.5)
