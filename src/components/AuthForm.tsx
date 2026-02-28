@@ -24,7 +24,7 @@ export default function AuthForm() {
       if (data.session) {
         router.push('/pantry')
       } else {
-        alert('Check your email for the confirmation link (if enabled)!')
+        alert('בדקו את המייל שלכם לאישור ההרשמה!')
       }
     }
     setLoading(false)
@@ -42,18 +42,18 @@ export default function AuthForm() {
 
   return (
     <div className="flex flex-col gap-4 w-full max-w-md p-8 bg-white dark:bg-zinc-900 rounded-xl shadow-lg border border-zinc-200 dark:border-zinc-800">
-      <h2 className="text-2xl font-bold text-center">Welcome to HomeMade</h2>
+      <h2 className="text-2xl font-bold text-center">ברוכים הבאים ל-HomeMade</h2>
       <form className="flex flex-col gap-3">
         <input
           type="email"
-          placeholder="Email"
+          placeholder="אימייל"
           className="p-2 border rounded dark:bg-zinc-800 dark:border-zinc-700"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type="password"
-          placeholder="Password"
+          placeholder="סיסמה"
           className="p-2 border rounded dark:bg-zinc-800 dark:border-zinc-700"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -65,14 +65,14 @@ export default function AuthForm() {
             disabled={loading}
             className="flex-1 bg-black text-white dark:bg-white dark:text-black p-2 rounded font-medium hover:opacity-90 disabled:opacity-50"
           >
-            Sign In
+            התחברות
           </button>
           <button
             onClick={handleSignUp}
             disabled={loading}
             className="flex-1 border border-zinc-300 dark:border-zinc-700 p-2 rounded font-medium hover:bg-zinc-50 dark:hover:bg-zinc-800 disabled:opacity-50"
           >
-            Sign Up
+            הרשמה
           </button>
         </div>
       </form>
