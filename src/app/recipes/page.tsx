@@ -31,8 +31,8 @@ export default function RecipesPage() {
           setError('שגיאה בטעינת המצרכים מהמזווה.')
         } else {
           try {
-            const suggested = await getSuggestedRecipes(pantry || [])
-            setRecipes(suggested)
+            const response = await getSuggestedRecipes(pantry || [])
+            setRecipes(response?.recipes || [])
           } catch (recipeError: unknown) {
             const err = recipeError as Error
             if (err.message === 'GEMINI_SERVICE_UNAVAILABLE') {
