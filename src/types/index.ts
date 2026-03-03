@@ -31,3 +31,10 @@ export interface Recipe {
   info?: string;
   suggestions?: string[];
 }
+
+export interface RecipeResponse {
+  recipes: Recipe[];
+  model: string;
+  status: string;
+  duration?: number;
+}

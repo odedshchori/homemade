@@ -10,6 +10,11 @@ export default function RecipesPage() {
   const [recipes, setRecipes] = useState<Recipe[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [debugInfo, setDebugInfo] = useState<{
+    model: string;
+    status: string;
+    duration?: number;
+  } | null>(null)
 
   const supabase = createClient()
 
@@ -31,8 +36,15 @@ export default function RecipesPage() {
           setError('שגיאה בטעינת המצרכים מהמזווה.')
         } else {
           try {
-            const suggested = await getSuggestedRecipes(pantry || [])
-            setRecipes(suggested)
+            const response = await getSuggestedRecipes(pantry || [])
+            setRecipes(response?.recipes || [])
+            if (response) {
+              setDebugInfo({
+                model: response.model,
+                status: response.status,
+                duration: response.duration
+              })
+            }
           } catch (recipeError: unknown) {
             const err = recipeError as Error
             if (err.message === 'GEMINI_SERVICE_UNAVAILABLE') {
@@ -63,7 +75,7 @@ export default function RecipesPage() {
   )
 
   return (
-    <div className="max-w-4xl mx-auto p-4 sm:p-8" dir="rtl">
+    <div className="max-w-4xl mx-auto p-4 sm:p-8 relative min-h-screen pb-24" dir="rtl">
       <header className="flex justify-between items-center mb-8">
         <h1 className="text-3xl font-bold tracking-tight text-black dark:text-zinc-50">הצעות למתכונים</h1>
         <Link href="/pantry" className="text-sm font-medium hover:underline text-zinc-600 dark:text-zinc-400">
@@ -100,7 +112,7 @@ export default function RecipesPage() {
                 </span>
               )}
               {recipe.info && (
-                <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full dark:bg-blue-900/30 dark:text-blue-300">
+                <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full dark:bg-blue-900/30 dark:text-orange-300">
                   💡 {recipe.info}
                 </span>
               )}
@@ -124,6 +136,33 @@ export default function RecipesPage() {
           </div>
         ))}
       </div>
+
+      {debugInfo && (
+        <div className="fixed bottom-4 left-4 right-4 md:left-auto md:w-80 p-4 bg-zinc-100/80 dark:bg-zinc-800/80 backdrop-blur-sm border border-zinc-200 dark:border-zinc-700 rounded-2xl shadow-lg text-[10px] font-mono text-zinc-500 dark:text-zinc-400 z-50">
+          <div className="flex justify-between items-center mb-1 border-b border-zinc-200 dark:border-zinc-700 pb-1">
+            <span className="font-bold uppercase tracking-wider">AI Debug Info</span>
+            <span className="px-1.5 py-0.5 rounded-md bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-200">
+              v1.0
+            </span>
+          </div>
+          <div className="space-y-1">
+            <div className="flex justify-between">
+              <span>Model:</span>
+              <span className="text-zinc-900 dark:text-zinc-100">{debugInfo.model}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Status:</span>
+              <span className="text-zinc-900 dark:text-zinc-100">{debugInfo.status}</span>
+            </div>
+            {debugInfo.duration && (
+              <div className="flex justify-between">
+                <span>Duration:</span>
+                <span className="text-zinc-900 dark:text-zinc-100">{(debugInfo.duration / 1000).toFixed(2)}s</span>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   )
 }

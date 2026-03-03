@@ -1,9 +1,10 @@
-import { Ingredient, Recipe } from '../types';
+import { Ingredient, Recipe, RecipeResponse } from '../types';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
 const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY || '');
 
-const generateWithModel = async (modelName: string, prompt: string): Promise<Recipe[]> => {
+const generateWithModel = async (modelName: string, prompt: string): Promise<RecipeResponse> => {
+  const start = Date.now();
   const model = genAI.getGenerativeModel({ model: modelName });
   const result = await model.generateContent(prompt);
   const response = await result.response;
@@ -11,11 +12,19 @@ const generateWithModel = async (modelName: string, prompt: string): Promise<Rec
   
   // Clean up response text if it includes markdown code blocks
   const cleanedText = text.replace(/```json/gi, '').replace(/```/g, '').trim();
-  return JSON.parse(cleanedText) as Recipe[];
+  const recipes = JSON.parse(cleanedText) as Recipe[];
+  const duration = Date.now() - start;
+
+  return {
+    recipes,
+    model: modelName,
+    status: 'success',
+    duration
+  };
 };
 
-export const getSuggestedRecipes = async (pantry: Ingredient[]): Promise<Recipe[]> => {
-  if (!pantry.length) return [];
+export const getSuggestedRecipes = async (pantry: Ingredient[]): Promise<RecipeResponse | null> => {
+  if (!pantry.length) return null;
   
   if (!process.env.NEXT_PUBLIC_GEMINI_API_KEY) {
     throw new Error('GEMINI_API_KEY is missing');
@@ -43,7 +52,8 @@ export const getSuggestedRecipes = async (pantry: Ingredient[]): Promise<Recipe[
 
   try {
     console.log('Attempting recipe generation with gemini-3-flash-preview...');
-    return await generateWithModel("gemini-3-flash-preview", prompt);
+    const result = await generateWithModel("gemini-3-flash-preview", prompt);
+    return { ...result, status: 'Success (Primary)' };
   } catch (error: unknown) {
     const errorWithStatus = error as { status?: number; message?: string };
     // Check if it's a 503 error or any other error that might benefit from a fallback
@@ -52,7 +62,8 @@ export const getSuggestedRecipes = async (pantry: Ingredient[]): Promise<Recipe[
     if (is503) {
       console.warn('gemini-3-flash-preview is experiencing high demand (503). Falling back to gemini-1.5-flash-latest...');
       try {
-        return await generateWithModel("gemini-1.5-flash-latest", prompt);
+        const result = await generateWithModel("gemini-1.5-flash-latest", prompt);
+        return { ...result, status: 'Success (Fallback - 503)' };
       } catch (fallbackError) {
         console.error('Fallback model gemini-1.5-flash-latest also failed:', fallbackError);
         throw new Error('GEMINI_SERVICE_UNAVAILABLE');
@@ -63,7 +74,8 @@ export const getSuggestedRecipes = async (pantry: Ingredient[]): Promise<Recipe[
     // Even for non-503, we might want to try fallback once if it's a transient issue
     try {
       console.log('Attempting fallback to gemini-1.5-flash-latest after primary error...');
-      return await generateWithModel("gemini-1.5-flash-latest", prompt);
+      const result = await generateWithModel("gemini-1.5-flash-latest", prompt);
+      return { ...result, status: 'Success (Fallback - Generic Error)' };
     } catch (fallbackError) {
       console.error('Fallback model also failed:', fallbackError);
       throw new Error('GEMINI_SERVICE_UNAVAILABLE');
