@@ -9,4 +9,3 @@
 | 5 | Hebrew Localization (RTL) | Completed | [Plan](./tracks/5-localization/plan.md) |
 | 6 | Deployment | Pending | [Plan](./tracks/6-deployment/plan.md) |
 | 7 | Gemini Error Handling and Fallback | Completed | [Plan](./tracks/7-gemini-error-handling/plan.md) |
-| 8 | Recipe Instructions Display | Completed | [Plan](./tracks/8-recipe-instructions/plan.md) |
