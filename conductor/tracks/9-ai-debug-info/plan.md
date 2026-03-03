@@ -5,7 +5,7 @@ Implement a UI element (window/tooltip/info box) that shows the model being used
 
 ## Tasks
 1. [x] Create a new branch `track-9-ai-debug-info`. [3743ca6]
-2. [ ] Update `src/services/recipeService.ts` to return model information along with the recipes (likely by wrapping the response).
+2. [x] Update `src/services/recipeService.ts` to return model information along with the recipes. [a7473d7] (likely by wrapping the response).
 3. [ ] Add state in `src/app/recipes/page.tsx` to track:
    - Current model name being queried.
    - Status (e.g., "Attempting Primary Model", "Falling back to Secondary Model", "Success").
