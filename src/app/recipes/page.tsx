@@ -15,6 +15,7 @@ export default function RecipesPage() {
     status: string;
     duration?: number;
   } | null>(null)
+  const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null)
 
   const supabase = createClient()
 
@@ -130,12 +131,56 @@ export default function RecipesPage() {
               </ul>
             </div>
 
-            <button className="w-full bg-zinc-900 dark:bg-zinc-50 text-white dark:text-zinc-900 py-3 rounded-xl font-bold hover:opacity-90 transition-opacity">
+            <button 
+              onClick={() => setSelectedRecipe(recipe)}
+              className="w-full bg-zinc-900 dark:bg-zinc-50 text-white dark:text-zinc-900 py-3 rounded-xl font-bold hover:opacity-90 transition-opacity"
+            >
               צפייה בהוראות ההכנה
             </button>
           </div>
         ))}
       </div>
+
+      {selectedRecipe && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-200">
+          <div className="bg-white dark:bg-zinc-900 w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 animate-in zoom-in-95 duration-200">
+            <div className="p-6 border-b border-zinc-100 dark:border-zinc-800 flex justify-between items-center bg-zinc-50/50 dark:bg-zinc-800/50">
+              <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">{selectedRecipe.title} - הוראות הכנה</h2>
+              <button 
+                onClick={() => setSelectedRecipe(null)}
+                className="p-2 hover:bg-zinc-200 dark:hover:bg-zinc-700 rounded-full transition-colors"
+                aria-label="סגור"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              </button>
+            </div>
+            
+            <div className="p-6 max-h-[70vh] overflow-y-auto">
+              <ol className="space-y-6">
+                {selectedRecipe.instructions.map((step, index) => (
+                  <li key={index} className="flex gap-4">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-zinc-900 dark:bg-zinc-50 text-white dark:text-zinc-900 flex items-center justify-center font-bold text-sm">
+                      {index + 1}
+                    </span>
+                    <p className="text-lg text-zinc-700 dark:text-zinc-300 leading-relaxed pt-0.5">
+                      {step}
+                    </p>
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            <div className="p-6 border-t border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/50">
+              <button 
+                onClick={() => setSelectedRecipe(null)}
+                className="w-full bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 py-3 rounded-xl font-bold hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
+              >
+                סגור
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {debugInfo && (
         <div className="fixed bottom-4 left-4 right-4 md:left-auto md:w-80 p-4 bg-zinc-100/80 dark:bg-zinc-800/80 backdrop-blur-sm border border-zinc-200 dark:border-zinc-700 rounded-2xl shadow-lg text-[10px] font-mono text-zinc-500 dark:text-zinc-400 z-50">
