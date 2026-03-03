@@ -10,4 +10,3 @@
 | 6 | Deployment | Pending | [Plan](./tracks/6-deployment/plan.md) |
 | 7 | Gemini Error Handling and Fallback | Completed | [Plan](./tracks/7-gemini-error-handling/plan.md) |
 | 8 | Recipe Instructions Display | Pending | [Plan](./tracks/8-recipe-instructions/plan.md) |
-| 9 | AI Process Debug Info | Completed | [Plan](./tracks/9-ai-debug-info/plan.md) |
