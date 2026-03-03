@@ -24,7 +24,6 @@
 .DS_Store
 *.pem
 /credentials
-/conductor
 GEMINI.md
 
 # debug
@@ -42,3 +41,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+/conductor/
