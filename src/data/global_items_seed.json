@@ -1,0 +1,702 @@
+[
+  {
+    "Item_ID": "fa841971-7f53-497e-ac9d-0f6999629b9e",
+    "Name": "עגבנייה",
+    "Category_ID": "Vegetables",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 7
+  },
+  {
+    "Item_ID": "b64109d6-33d4-4075-ab84-ebca98e8c6ad",
+    "Name": "מלפפון",
+    "Category_ID": "Vegetables",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 7
+  },
+  {
+    "Item_ID": "d18858ed-4ae4-4d3b-81fc-6666ed5f780b",
+    "Name": "פלפל אדום",
+    "Category_ID": "Vegetables",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 10
+  },
+  {
+    "Item_ID": "bfed0114-f060-4c3f-a169-8a7706f87640",
+    "Name": "בצל",
+    "Category_ID": "Vegetables",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 30
+  },
+  {
+    "Item_ID": "eb12fcc4-b6f2-4fa9-b56c-e9f7ff102644",
+    "Name": "שום",
+    "Category_ID": "Vegetables",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 60
+  },
+  {
+    "Item_ID": "f0c5f570-4567-4c71-a81b-76d3322ebf60",
+    "Name": "תפוח אדמה",
+    "Category_ID": "Vegetables",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 30
+  },
+  {
+    "Item_ID": "8176cfae-ad48-4af1-b5f3-8bac405f214b",
+    "Name": "גזר",
+    "Category_ID": "Vegetables",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 21
+  },
+  {
+    "Item_ID": "752d2bb9-cbd3-42fa-87df-b9610e30945b",
+    "Name": "חסה",
+    "Category_ID": "Vegetables",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 5
+  },
+  {
+    "Item_ID": "0c70673a-1b66-41ae-a776-80d632dcc679",
+    "Name": "קישוא",
+    "Category_ID": "Vegetables",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 7
+  },
+  {
+    "Item_ID": "54087b1c-93bb-404e-9ded-695549208577",
+    "Name": "כרובית",
+    "Category_ID": "Vegetables",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 7
+  },
+  {
+    "Item_ID": "6311e512-a8ef-4075-a2c0-16d6caac055c",
+    "Name": "כרוב לבן",
+    "Category_ID": "Vegetables",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 14
+  },
+  {
+    "Item_ID": "1a02b00e-ebbe-4b6a-b772-26eed4dd9c04",
+    "Name": "ברוקולי",
+    "Category_ID": "Vegetables",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 7
+  },
+  {
+    "Item_ID": "d1ec0fbd-45de-479b-8625-e5ed1041d94d",
+    "Name": "בטטה",
+    "Category_ID": "Vegetables",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 14
+  },
+  {
+    "Item_ID": "869f0b3d-e97f-4fe3-9ee4-cf3343351981",
+    "Name": "חציל",
+    "Category_ID": "Vegetables",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 7
+  },
+  {
+    "Item_ID": "532afff6-1eba-47ca-a5ce-c0fd78df8b20",
+    "Name": "פטריות",
+    "Category_ID": "Vegetables",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 5
+  },
+  {
+    "Item_ID": "6bd0f3dd-ed52-4ca6-820f-207de6868ecf",
+    "Name": "לימון",
+    "Category_ID": "Fruits",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 14
+  },
+  {
+    "Item_ID": "d786b46e-c418-427f-b13c-6ddfeb8d5adb",
+    "Name": "תפוח עץ",
+    "Category_ID": "Fruits",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 21
+  },
+  {
+    "Item_ID": "2c273e5c-7bba-4c4b-b252-389c563ff6bc",
+    "Name": "בננה",
+    "Category_ID": "Fruits",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 5
+  },
+  {
+    "Item_ID": "ab2a55cd-3321-4060-819f-3aa8d56b5f7e",
+    "Name": "אפרסק",
+    "Category_ID": "Fruits",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 5
+  },
+  {
+    "Item_ID": "a7c7ad85-e5fa-49ba-9f00-4d913f0c4ae2",
+    "Name": "ענבים",
+    "Category_ID": "Fruits",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 7
+  },
+  {
+    "Item_ID": "8b159906-f082-4f90-b267-2048319f3397",
+    "Name": "תפוז",
+    "Category_ID": "Fruits",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 14
+  },
+  {
+    "Item_ID": "57d50390-7cad-460e-9ffd-678b8a8fd530",
+    "Name": "קלמנטינה",
+    "Category_ID": "Fruits",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 10
+  },
+  {
+    "Item_ID": "c6ee967b-43ea-47cf-afb9-7c6ea9acd765",
+    "Name": "אבטיח",
+    "Category_ID": "Fruits",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 7
+  },
+  {
+    "Item_ID": "185188ab-6ea9-42a9-b8ad-e75a39562d7b",
+    "Name": "מלון",
+    "Category_ID": "Fruits",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 7
+  },
+  {
+    "Item_ID": "b429e3e0-2d1d-4dec-b40c-042cce669c4a",
+    "Name": "תותים",
+    "Category_ID": "Fruits",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 3
+  },
+  {
+    "Item_ID": "931fa70d-98d6-42d0-bb9d-cdfe92152663",
+    "Name": "חלב",
+    "Category_ID": "Dairy",
+    "Default_Unit": "ml",
+    "Expiry_Buffer": 7
+  },
+  {
+    "Item_ID": "f06e1047-0c1f-4611-85fb-e0f85830f686",
+    "Name": "גבינה לבנה",
+    "Category_ID": "Dairy",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 10
+  },
+  {
+    "Item_ID": "c4721627-f084-490e-bbe2-437d3ac93a6a",
+    "Name": "קוטג'",
+    "Category_ID": "Dairy",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 7
+  },
+  {
+    "Item_ID": "ee69b37c-7831-4f91-8563-c6ba187df00e",
+    "Name": "יוגורט",
+    "Category_ID": "Dairy",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 14
+  },
+  {
+    "Item_ID": "90f465e3-6828-4ba0-9d3d-0a0e998d51de",
+    "Name": "חמאה",
+    "Category_ID": "Dairy",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 30
+  },
+  {
+    "Item_ID": "36bc3bac-f498-45ae-91ea-6198e769e320",
+    "Name": "גבינה צהובה",
+    "Category_ID": "Dairy",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 21
+  },
+  {
+    "Item_ID": "5458d450-a626-432f-af1a-53671af90fb0",
+    "Name": "שמנת חמוצה",
+    "Category_ID": "Dairy",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 10
+  },
+  {
+    "Item_ID": "411021c0-a1cd-4980-871f-1138f1fc569c",
+    "Name": "שמנת מתוקה",
+    "Category_ID": "Dairy",
+    "Default_Unit": "ml",
+    "Expiry_Buffer": 14
+  },
+  {
+    "Item_ID": "92cf4f3f-8238-4cff-a7be-7151db764d6c",
+    "Name": "לבנה",
+    "Category_ID": "Dairy",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 14
+  },
+  {
+    "Item_ID": "ae2f483a-57ab-4c74-9314-ad5ef368d7bb",
+    "Name": "ביצים",
+    "Category_ID": "Dairy",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 30
+  },
+  {
+    "Item_ID": "ab5de717-506e-4051-a0ad-2d85caa68fd3",
+    "Name": "חזה עוף",
+    "Category_ID": "Meat/Fish",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 3
+  },
+  {
+    "Item_ID": "45d931c2-8ca5-40e3-91bc-59cae22062ee",
+    "Name": "כרעי עוף",
+    "Category_ID": "Meat/Fish",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 3
+  },
+  {
+    "Item_ID": "d0ca0e88-b506-4502-9e1b-1adf4d397b11",
+    "Name": "בשר טחון",
+    "Category_ID": "Meat/Fish",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 2
+  },
+  {
+    "Item_ID": "60693a60-80d5-4e0a-be85-2e48fac53601",
+    "Name": "דג סלמון",
+    "Category_ID": "Meat/Fish",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 2
+  },
+  {
+    "Item_ID": "e16dc243-2b75-4452-92ee-f0da7c743820",
+    "Name": "טונה בשימורים",
+    "Category_ID": "Canned Goods",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 730
+  },
+  {
+    "Item_ID": "0e3669f3-9493-42b2-8821-3b9d4bc9d764",
+    "Name": "אורז",
+    "Category_ID": "Grains & Legumes",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 365
+  },
+  {
+    "Item_ID": "e0609cc2-397e-4036-9727-264b9350491c",
+    "Name": "פסטה",
+    "Category_ID": "Grains & Legumes",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 730
+  },
+  {
+    "Item_ID": "6cd3fb38-2c44-486d-8a72-ad6db73161dd",
+    "Name": "עדשים ירוקות",
+    "Category_ID": "Grains & Legumes",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 365
+  },
+  {
+    "Item_ID": "0c5aefbf-8348-44d2-904e-11977a98ebfc",
+    "Name": "חומוס יבש",
+    "Category_ID": "Grains & Legumes",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 365
+  },
+  {
+    "Item_ID": "150f53bd-f1c3-44b6-83d7-cf8a3809a0a6",
+    "Name": "קינואה",
+    "Category_ID": "Grains & Legumes",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 365
+  },
+  {
+    "Item_ID": "79c4961a-be08-4b3e-bdee-c123dc3eb06f",
+    "Name": "בורגול",
+    "Category_ID": "Grains & Legumes",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 365
+  },
+  {
+    "Item_ID": "c43d4cdc-dd5f-4d37-ad27-b5662be8b50e",
+    "Name": "קוסקוס",
+    "Category_ID": "Grains & Legumes",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 365
+  },
+  {
+    "Item_ID": "58b14a23-b3f1-489c-b300-07573e203387",
+    "Name": "פתיתים",
+    "Category_ID": "Grains & Legumes",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 365
+  },
+  {
+    "Item_ID": "da4ea61b-f393-4a0a-917f-4871f01d048c",
+    "Name": "קמח",
+    "Category_ID": "Grains & Legumes",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 180
+  },
+  {
+    "Item_ID": "15579f61-9044-48c9-9492-faf3f4721178",
+    "Name": "סוכר",
+    "Category_ID": "Spices",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 730
+  },
+  {
+    "Item_ID": "1c15cc89-c134-41af-b44d-483304349536",
+    "Name": "מלח",
+    "Category_ID": "Spices",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 1000
+  },
+  {
+    "Item_ID": "ff627ba0-8cf5-43b3-a8f3-ce1c37e2abc2",
+    "Name": "פלפל שחור",
+    "Category_ID": "Spices",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 365
+  },
+  {
+    "Item_ID": "05aeb999-6c2c-4961-b8f2-c8b2f26c3882",
+    "Name": "פפריקה",
+    "Category_ID": "Spices",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 180
+  },
+  {
+    "Item_ID": "b350f5b1-1463-42d7-b607-1c14de7d9467",
+    "Name": "כמון",
+    "Category_ID": "Spices",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 180
+  },
+  {
+    "Item_ID": "472ed929-b753-4a0e-8c27-7678a06a4523",
+    "Name": "כורכום",
+    "Category_ID": "Spices",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 180
+  },
+  {
+    "Item_ID": "a0521aed-59d8-4483-9953-ce25384f8c6a",
+    "Name": "קינמון",
+    "Category_ID": "Spices",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 365
+  },
+  {
+    "Item_ID": "cd19ba07-f652-4352-96f3-ab83d9ce01ae",
+    "Name": "שמן זית",
+    "Category_ID": "Canned Goods",
+    "Default_Unit": "ml",
+    "Expiry_Buffer": 365
+  },
+  {
+    "Item_ID": "445526e7-4b69-42a1-9d64-2a29bfdf379c",
+    "Name": "שמן קנולה",
+    "Category_ID": "Canned Goods",
+    "Default_Unit": "ml",
+    "Expiry_Buffer": 365
+  },
+  {
+    "Item_ID": "b738e284-9369-4209-8bba-2158032ebe70",
+    "Name": "רסק עגבניות",
+    "Category_ID": "Canned Goods",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 365
+  },
+  {
+    "Item_ID": "d7243d79-1a6b-4182-b068-854efc3eff80",
+    "Name": "תירס בשימורים",
+    "Category_ID": "Canned Goods",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 730
+  },
+  {
+    "Item_ID": "5efca3d5-2b92-4940-904c-888b16db8b0a",
+    "Name": "אפונה בשימורים",
+    "Category_ID": "Canned Goods",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 730
+  },
+  {
+    "Item_ID": "53b46e34-1745-4a2d-b233-edb91cfd9004",
+    "Name": "זיתים",
+    "Category_ID": "Canned Goods",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 365
+  },
+  {
+    "Item_ID": "af10d0f1-1cd6-4b97-be2b-3033b1c2143e",
+    "Name": "מלפפון חמוץ",
+    "Category_ID": "Canned Goods",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 365
+  },
+  {
+    "Item_ID": "4c4c3323-9d1c-4a72-91e1-ba1ddaa09b44",
+    "Name": "טחינה גולמית",
+    "Category_ID": "Canned Goods",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 180
+  },
+  {
+    "Item_ID": "58a88eeb-79a4-4e78-aa64-21a7e1d08328",
+    "Name": "דבש",
+    "Category_ID": "Canned Goods",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 730
+  },
+  {
+    "Item_ID": "9f99e87d-be61-44ef-949f-618e5bf8f871",
+    "Name": "ריבה",
+    "Category_ID": "Canned Goods",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 365
+  },
+  {
+    "Item_ID": "33ad11c5-beca-4566-97b3-6c59f23d8d78",
+    "Name": "שוקולד",
+    "Category_ID": "Canned Goods",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 180
+  },
+  {
+    "Item_ID": "122d85d6-9ff2-4a3e-b72a-8b02c707c8ba",
+    "Name": "קפה נמס",
+    "Category_ID": "Canned Goods",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 180
+  },
+  {
+    "Item_ID": "a5c50a0e-76e4-4dce-ade3-75847c6e81e5",
+    "Name": "תה",
+    "Category_ID": "Canned Goods",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 365
+  },
+  {
+    "Item_ID": "bccb9afd-3aa5-4072-a514-caba661f9173",
+    "Name": "פטרוזיליה",
+    "Category_ID": "Vegetables",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 5
+  },
+  {
+    "Item_ID": "c57187e0-bd3a-4707-a2a4-b3614efa1123",
+    "Name": "כוסברה",
+    "Category_ID": "Vegetables",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 5
+  },
+  {
+    "Item_ID": "3b937db4-6463-4e76-8d13-8de39070646b",
+    "Name": "שמיר",
+    "Category_ID": "Vegetables",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 5
+  },
+  {
+    "Item_ID": "4810e98c-f54f-438f-a329-6ecaedbd2514",
+    "Name": "נענע",
+    "Category_ID": "Vegetables",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 5
+  },
+  {
+    "Item_ID": "947b9afb-b778-4c8d-ac5b-fb937d0675e4",
+    "Name": "אבוקדו",
+    "Category_ID": "Fruits",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 5
+  },
+  {
+    "Item_ID": "489cfdeb-adda-4afc-9cb9-50fcc0623303",
+    "Name": "פומלה",
+    "Category_ID": "Fruits",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 14
+  },
+  {
+    "Item_ID": "ff152f11-e136-4219-b68c-723057bb579b",
+    "Name": "תמרים",
+    "Category_ID": "Fruits",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 90
+  },
+  {
+    "Item_ID": "5759f255-d2af-420e-8de1-55890e14cc3e",
+    "Name": "אגוזי מלך",
+    "Category_ID": "Grains & Legumes",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 180
+  },
+  {
+    "Item_ID": "4cfc61dc-af5f-4b54-b07d-104e80361ff0",
+    "Name": "שקדים",
+    "Category_ID": "Grains & Legumes",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 180
+  },
+  {
+    "Item_ID": "be269bd9-bb69-40be-96a2-36ecfba63d5f",
+    "Name": "שיבולת שועל",
+    "Category_ID": "Grains & Legumes",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 180
+  },
+  {
+    "Item_ID": "e1e9f413-32b7-449b-941a-97a79c7491b0",
+    "Name": "סולת",
+    "Category_ID": "Grains & Legumes",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 180
+  },
+  {
+    "Item_ID": "0903b4a7-03be-4242-a051-90652c04527d",
+    "Name": "חזה בקר",
+    "Category_ID": "Meat/Fish",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 3
+  },
+  {
+    "Item_ID": "9b9c2f1c-3c97-4866-b018-a2e6057f09c5",
+    "Name": "שוקי עוף",
+    "Category_ID": "Meat/Fish",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 3
+  },
+  {
+    "Item_ID": "f258c635-46bf-4dca-8862-66db187074c0",
+    "Name": "פילה אמנון",
+    "Category_ID": "Meat/Fish",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 2
+  },
+  {
+    "Item_ID": "6ce93372-c970-43e2-88d6-830a1b9b80e0",
+    "Name": "פילה מרלוזה",
+    "Category_ID": "Meat/Fish",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 2
+  },
+  {
+    "Item_ID": "26ed291f-b36e-4a3b-a48f-9103ca0623ca",
+    "Name": "חומוס מוכן",
+    "Category_ID": "Dairy",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 14
+  },
+  {
+    "Item_ID": "57865e22-eb22-4379-9cfc-f1e43377afeb",
+    "Name": "סלט טורקי",
+    "Category_ID": "Dairy",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 14
+  },
+  {
+    "Item_ID": "4e0bac9e-f2ed-440c-9654-d549b5018aaf",
+    "Name": "מיונז",
+    "Category_ID": "Canned Goods",
+    "Default_Unit": "ml",
+    "Expiry_Buffer": 180
+  },
+  {
+    "Item_ID": "5bea8abd-f0f2-4bbd-a9b2-ccbff8a5417d",
+    "Name": "קטשופ",
+    "Category_ID": "Canned Goods",
+    "Default_Unit": "ml",
+    "Expiry_Buffer": 180
+  },
+  {
+    "Item_ID": "5cabea9c-7254-4c63-8449-951bb662a210",
+    "Name": "חרדל",
+    "Category_ID": "Canned Goods",
+    "Default_Unit": "ml",
+    "Expiry_Buffer": 180
+  },
+  {
+    "Item_ID": "9bf9f613-d969-480a-b18d-acada2573f8d",
+    "Name": "רוטב סויה",
+    "Category_ID": "Canned Goods",
+    "Default_Unit": "ml",
+    "Expiry_Buffer": 365
+  },
+  {
+    "Item_ID": "0c84e3f5-05cc-4040-83fd-fe0737be0b9e",
+    "Name": "חומץ",
+    "Category_ID": "Canned Goods",
+    "Default_Unit": "ml",
+    "Expiry_Buffer": 730
+  },
+  {
+    "Item_ID": "bdb953fa-9738-421e-a8fa-adad21b5b353",
+    "Name": "יין לבישול",
+    "Category_ID": "Canned Goods",
+    "Default_Unit": "ml",
+    "Expiry_Buffer": 365
+  },
+  {
+    "Item_ID": "5311c267-7d53-4c13-ac2c-a8934b9a5e0a",
+    "Name": "פירורי לחם",
+    "Category_ID": "Grains & Legumes",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 180
+  },
+  {
+    "Item_ID": "e4c11a1d-6218-468f-82ff-7e4f89aa7c84",
+    "Name": "אבקת אפייה",
+    "Category_ID": "Spices",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 365
+  },
+  {
+    "Item_ID": "5deb702c-1fa5-419a-b4c9-501f8e4456cd",
+    "Name": "סודה לשתייה",
+    "Category_ID": "Spices",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 365
+  },
+  {
+    "Item_ID": "36c96b18-aad2-4fc3-8250-cd7709e8e14d",
+    "Name": "תמצית וניל",
+    "Category_ID": "Spices",
+    "Default_Unit": "ml",
+    "Expiry_Buffer": 365
+  },
+  {
+    "Item_ID": "de580f2d-8479-4ec2-9daf-6a9203fb0ceb",
+    "Name": "אגוז מוסקט",
+    "Category_ID": "Spices",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 365
+  },
+  {
+    "Item_ID": "9cd456b4-7704-4922-8be2-2a3f140c0b5b",
+    "Name": "זנגביל/ג'ינג'ר",
+    "Category_ID": "Vegetables",
+    "Default_Unit": "Grams",
+    "Expiry_Buffer": 14
+  },
+  {
+    "Item_ID": "95e14b6f-c6f7-4a9c-88f5-29b43214f7d3",
+    "Name": "צנונית",
+    "Category_ID": "Vegetables",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 7
+  },
+  {
+    "Item_ID": "a7238fc5-53b3-46c8-ace5-9bce1f9e4b97",
+    "Name": "קולרבי",
+    "Category_ID": "Vegetables",
+    "Default_Unit": "Units",
+    "Expiry_Buffer": 10
+  }
+]
